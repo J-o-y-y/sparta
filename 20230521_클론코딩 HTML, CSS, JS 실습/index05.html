@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card-btn {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card shadow" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title" id="title">제목</h5>
+          <p class="card-text" id="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <button class="btn btn-success card-btn" id="button">버튼</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const button = document.getElementById("button");
+      const title = document.getElementById("title");
+      const text = document.getElementById("text"); // 카드 내용 요소를 선택
+
+      button.addEventListener("click", function () {
+        this.style.backgroundColor = "blue";
+      });
+
+      title.addEventListener("click", function () {
+        this.textContent = "자바스크립트";
+      });
+
+      // 카드 내용 요소에 클릭 이벤트 리스너를 추가
+      // 클릭하면 텍스트 색상이 핑크색으로 바뀜
+      text.addEventListener("click", function () {
+        this.style.color = "pink";
+      });
+    </script>
+  </body>
+</html>

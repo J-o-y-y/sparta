@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 메타 태그 세트: 문서 인코딩, IE 호환성 모드, 뷰포트 설정 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <!-- 부트스트랩 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- 사용자 정의 CSS 스타일 -->
+    <style>
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card-btn {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 카드 컨테이너 -->
+    <div class="card-container">
+      <!-- 카드 -->
+      <div class="card shadow" style="width: 18rem">
+        <!-- 카드 내용 -->
+        <div class="card-body">
+          <!-- 카드 제목 -->
+          <h5 class="card-title" id="title">제목</h5>
+          <!-- 카드 텍스트 -->
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <!-- 카드 버튼 -->
+          <button class="btn btn-success card-btn" id="button">버튼</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript 코드 -->
+    <script>
+      // 버튼과 제목 요소를 DOM으로부터 선택
+      const button = document.getElementById("button");
+      const title = document.getElementById("title");
+
+      // 버튼 요소에 클릭 이벤트 리스너를 추가
+      // 클릭하면 버튼의 배경색이 파란색으로 바뀜
+      button.addEventListener("click", function () {
+        this.style.backgroundColor = "blue";
+      });
+
+      // 제목 요소에 클릭 이벤트 리스너를 추가
+      // 클릭하면 제목 텍스트가 "자바스크립트"로 바뀜
+      title.addEventListener("click", function () {
+        this.textContent = "자바스크립트";
+      });
+    </script>
+  </body>
+</html>
